@@ -1,4 +1,5 @@
 import pygame
+from game import Game
 
 pygame.init()
 
@@ -6,14 +7,20 @@ pygame.init()
 pygame.display.set_caption('Comet Fall Game')
 screen = pygame.display.set_mode((1080, 720))
 
-# import du background
+# Import du background
 background = pygame.image.load('assets/bg.jpg')
+
+# Charger le jeu
+game = Game()
 
 running = True
 
 while running:
     # Appliquer le background
     screen.blit(background, (0, -200))
+    # Appliquer image joueur
+    screen.blit(game.player.image, game.player.rect)
+
     # Mettre a jour ecran
     pygame.display.flip()
 
