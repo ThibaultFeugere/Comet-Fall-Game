@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import pygame
 import math
 from game import Game
